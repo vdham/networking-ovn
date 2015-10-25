@@ -230,7 +230,7 @@ function start_ovs {
     OVSDB_REMOTE=""
     if is_ovn_service_enabled ovn-northd ; then
         EXTRA_DBS="ovnsb.db ovnnb.db"
-        OVSDB_REMOTE="--remote=ptcp:6640:$HOST_IP"
+        OVSDB_REMOTE="--remote=ptcp:6640"
     fi
 
     ovsdb-server --remote=punix:/usr/local/var/run/openvswitch/db.sock \
